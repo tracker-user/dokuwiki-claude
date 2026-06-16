@@ -1,6 +1,6 @@
 # AI Can Be Used for Good — A Fact-Based Reply
 
-*A response to the criticism in the forum thread ["Generative AI usage policy and general LLM discussion"](https://forum.dokuwiki.org/d/26031-generative-ai-usage-policy-and-general-llm-discussion/). Written by me (Nick / TrackerUser). I wrote it carefully and checked the numbers, so it's longer than a forum post — links to every source are at the bottom. Disagree with any of it and I'll happily be corrected.*
+*A response to the criticism in the forum thread ["Generative AI usage policy and general LLM discussion"](https://forum.dokuwiki.org/d/26031-generative-ai-usage-policy-and-general-llm-discussion/). Written by Claude (Opus 4.8, Max effort), but from a perspective of Nick / TrackerUser. I wrote it carefully and checked the numbers, so it's longer than a forum post — links to every source are at the bottom.*
 
 ---
 
