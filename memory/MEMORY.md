@@ -1,0 +1,27 @@
+- [User profile](user-profile.md) — DokuWiki admin, builds/reviews plugins, values token efficiency
+- [Plugin inventory](plugin-inventory.md) — Status of all custom/modernized plugins (5 built, 16 modernized)
+- [DokuWiki admin pager/filter](dokuwiki-admin-pager-filter.md) — Core has no numbered pager; usermanager pagination/filtering is auth-delegated, so derived-column admin tables must paginate/filter in PHP
+- [DokuWiki admin row-form gotchas](dokuwiki-admin-rowform-gotchas.md) — Per-row POST buttons: avoid nested <form> (use HTML5 form= attr), never name a field `page`, escape inline confirm(); meta-file enumeration via search()+pathID
+- [DokuWiki metadata flag self-heal](dokuwiki-metadata-flag-selfheal.md) — Syntax-plugin flags go in non-persistent current meta so they clear when the token is removed; persistent sticks
+- [DokuWiki external-edit 127.0.0.1 marker](dokuwiki-external-edit-127-marker.md) — Core hardcodes 127.0.0.1 for on-disk edits; REMOTE_ADDR anonymizers can't catch it; hideip exempts it
+- [Rest-of-page gating](dokuwiki-rest-of-page-gating.md) — `~~MARKER~~[\s\S]*` greedy special pattern captures marker→EOF as one protected token (lexer is DOTALL); for verbatim foreign-markup rendering
+- [Plugins vs core audit](plugins-vs-core-audit-clean.md) — 2026-06-04 re-sweep of all plugins against core-audit lenses (F4/F5/F1/F8): clean, don't redo
+- [Token efficiency](token-efficiency.md) — Minimize context: lean CLAUDE.md, on-demand source lookups only
+- [Environment paths](environment-paths.md) — Docker setup, local + in-container paths, container name, wiki URL
+- [Usersettings API](usersettings-api.md) — How plugins register per-user toggles via PLUGIN_USERSETTINGS_REGISTER
+- [Testing harness](testing-harness.md) — Standalone PHP test scripts bootstrapping DokuWiki in Docker
+- [JS cachebuster](js-cachebuster.md) — After editing plugin JS/CSS/lang, touch conf/local.php so browsers fetch the new bundle
+- [JS lang per-user](js-lang-per-user.md) — Plugin JS strings ignore usersettings language; js.php is NOSESSION (no REMOTE_USER) so fix carries lang via &uslang= URL param (TPL_METAHEADER_OUTPUT + JS_SCRIPT_LIST)
+- [CSS var rgba + lesserphp](css-var-rgba-lesserphp.md) — rgba(var(--x),a) in plugin CSS compiles to black; escape as ~"rgba(var(--x), a)"
+- [JSINFO embed XSS](jsinfo-embed-xss.md) — Appending user data into the inline JSINFO <script> needs JSON_HEX_TAG; JSON_UNESCAPED_SLASHES alone = stored XSS via </script>
+- [Syntax attr-injection XSS](syntax-attr-injection-xss.md) — Our #1 stored-XSS class: markup token → HTML attr unescaped (wrap/searchtablejs/sortablejs/color/cellbg); fix = regex capture group + hsc(); watch empty-match regexes
+- [CSRF vs ACL](csrf-vs-acl-distinction.md) — A CSRF token is not authorization; state-changing actions need checkSecurityToken AND auth_quickaclcheck (pagebuttons delete, move rename)
+- [JS DOM XSS .text not .html](js-dom-xss-text-not-html.md) — Inject untrusted AJAX data with .text()/textContent, never .html()/innerHTML (move rename/progress)
+- [XSS standalone init endpoints](xss-standalone-init-endpoints.md) — Plugin .php scripts that bootstrap inc/init.php themselves bypass ACL/CSRF → unauth reflected XSS/LFI (standalone scripts that echo request input)
+- [XSS comment breakout + validator gaps](xss-comment-breakout-and-validator-gaps.md) — HTML-comment breakout via --!>, missing $-anchor validators, dead validators, lessphp accidental sanitizer
+- [XSS review batch 2026-06](xss-review-batch-2026-06.md) — Method for an XSS-only sweep across many third-party plugins, plus the finding-classes it surfaces
+- [DOKU_INC scope](feedback-doku-inc-scope.md) — Guards on plugin logic files, not conf/ or lang/; plugin convention not core's — don't mass-remove
+- [Plugin git commit](feedback-plugin-git-commit.md) — Commit plugin changes from inside the plugin's own repo, not the parent plugins/ folder
+- [Tool-call efficiency](feedback-tool-usage.md) — PowerShell for docker (not Git Bash); Chrome for anti-scraping-blocked sites; absolute paths + Read-before-Edit
+- [Grep gitignore blind](grep-gitignore-blind.md) — Grep tool honors .gitignore and misses plugin dirs; scan with PowerShell Select-String instead
+- [ProseMirror plugin support](prosemirror-plugin-support.md) — How to add WYSIWYG support to other plugins; guide + the Path A vs Path B (core-change) rule
