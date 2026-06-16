@@ -46,6 +46,9 @@ encourage you to try them — and to bring your own judgment along for the ride.
 .
 ├── CLAUDE.md                      # Project instructions, auto-loaded by Claude Code each session
 ├── PROSEMIRROR_PLUGIN_SUPPORT.md  # Deep-dive: adding WYSIWYG (ProseMirror) support to a syntax plugin
+├── PUBLISHING.md                  # How to publish a plugin to dokuwiki.org + page template
+├── PLUGIN_REPO_REFERENCE.md       # Directory field/type/tag reference (the data behind it)
+├── PROMPT_NEW_PLUGIN_PAGE.md      # Reusable prompt to generate plugin directory pages
 └── memory/                        # Persistent AI memory — one lesson per file
     ├── MEMORY.md                  # The index (one line per memory, loaded every session)
     ├── user-profile.md            # Who the assistant is working with
@@ -71,6 +74,12 @@ mistake again" layer.
 
 **`PROSEMIRROR_PLUGIN_SUPPORT.md`** is a standalone technical guide produced during the
 work, documenting how to make a syntax plugin render in the ProseMirror WYSIWYG editor.
+
+**`PUBLISHING.md`**, **`PLUGIN_REPO_REFERENCE.md`** and **`PROMPT_NEW_PLUGIN_PAGE.md`** cover
+publishing a finished plugin to the official directory at <https://www.dokuwiki.org/plugins>:
+the step-by-step guide and page template, the reusable field/`type`/tag reference behind it
+(extracted once from the repository plugin and the live tag cloud), and a ready-to-paste
+prompt that generates the directory pages.
 
 ---
 
