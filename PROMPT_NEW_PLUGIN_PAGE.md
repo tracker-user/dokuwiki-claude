@@ -42,14 +42,17 @@ For **each** plugin, before writing the page:
 
 1. Read its `README.md` and `plugin.info.txt`.
 2. Confirm `type` by listing its component files (`syntax*/action*/admin*/helper*/…`).
-3. Pick 3–7 `tags` from the vocabulary in the reference (don't invent new tags).
+3. Pick 3–7 `tags` from the vocabulary in the reference (don't invent new ones) — and **always
+   include `ai-assisted`** (the one deliberate custom tag).
 4. `ls images/` to get the **exact** screenshot filenames (some are `-screen.png`,
    some are `-screen1.png`, `-screen2.png`, …). Embed them in the **Usage** section with
    `{{<raw-url>?600|caption}}`.
 5. Build the body from the README: Installation → Usage (with screenshots) → Configuration
    (only if `conf/metadata.php` exists) → Syntax (**only** if it has a Syntax component) →
    Development → Changelog (RSS, `main` branch) → "Issues, questions & support" (GitHub issues
-   + optional forum).
+   + optional forum) → **"Made with AI assistance"** (the standard disclosure section from
+   PUBLISHING.md, plus the `:!:` notice right after the intro that links to it). The intro itself
+   can be as long as you need — copy the opening of the README if that reads well.
 
 Pre-derived facts to **verify, not assume**:
 

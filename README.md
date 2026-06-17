@@ -46,6 +46,7 @@ encourage you to try them — and to bring your own judgment along for the ride.
 .
 ├── CLAUDE.md                      # Project instructions, auto-loaded by Claude Code each session
 ├── PROSEMIRROR_PLUGIN_SUPPORT.md  # Deep-dive: adding WYSIWYG (ProseMirror) support to a syntax plugin
+├── AI-FOR-GOOD.md                 # Essay: the fact-based case for responsible AI-assisted work
 ├── PUBLISHING.md                  # How to publish a plugin to dokuwiki.org + page template
 ├── PLUGIN_REPO_REFERENCE.md       # Directory field/type/tag reference (the data behind it)
 ├── PROMPT_NEW_PLUGIN_PAGE.md      # Reusable prompt to generate plugin directory pages
@@ -79,7 +80,12 @@ work, documenting how to make a syntax plugin render in the ProseMirror WYSIWYG 
 publishing a finished plugin to the official directory at <https://www.dokuwiki.org/plugins>:
 the step-by-step guide and page template, the reusable field/`type`/tag reference behind it
 (extracted once from the repository plugin and the live tag cloud), and a ready-to-paste
-prompt that generates the directory pages.
+prompt that generates the directory pages. The published plugin pages each carry a short
+**"Made with AI assistance"** disclosure that links back to the `dokuwiki-claude` repo.
+
+**`AI-FOR-GOOD.md`** is a standalone essay — a fact-based, sourced reply to the common criticisms
+of AI-assisted development (environmental cost, copyright, and the "it's just slop" objection).
+Those published disclosure sections link to it for readers who are skeptical of the approach.
 
 ---
 

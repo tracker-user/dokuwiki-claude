@@ -188,6 +188,11 @@ integration surface.
 | `annotations` | `annotations`, `comment`, `discussion`, `collaboration`, `note` |
 
 > There is **no** `usersettings` tag — usersettings integration is mentioned in prose, not tagged or depended-on.
+>
+> **Always also include `ai-assisted`.** Every original/adopted plugin carries it, alongside the
+> "Made with AI assistance" disclosure section — see [PUBLISHING.md](PUBLISHING.md). It isn't in
+> the 309-tag cloud above; it's a deliberate custom tag we add (tags are free-form, so this is
+> fine). The generic `ai` tag (Tier 2) already exists too if you want both.
 
 ---
 
