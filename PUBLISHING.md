@@ -138,8 +138,8 @@ adapt it from, or simply copy, the opening of the README.>
 
 ===== Installation =====
 
-Search for **<name>** in the [[plugin:extension|Extension Manager]] and install it, or see
-[[:Plugins]] for manual installation. The plugin works out of the box.
+Search for **<name>** in the [[plugin:extension|Extension Manager]] and install it, or see the
+[[:Plugin Installation Instructions]] for manual installation.
 
 <Only if it needs something extra — otherwise delete this note:>
 :!: **Optional:** if the [[plugin:usersettings]] plugin is installed, users can toggle
