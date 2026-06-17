@@ -73,7 +73,7 @@ block right is the entire job — the prose around it is for humans.
   `{{rss>https://github.com/tracker-user/dokuwiki-<name>/commits/main.atom date 8}}`
   (`date` shows commit dates; `8` = number of entries).
 - **Body screenshots → raw GitHub `-screen` images.** Embed with a width and caption:
-  `{{https://raw.githubusercontent.com/tracker-user/dokuwiki-<name>/main/images/<name>-screen.png?680|Caption}}`
+  `{{https://raw.githubusercontent.com/tracker-user/dokuwiki-<name>/main/images/<name>-screen.png|Caption}}`
   *(Fallback if dokuwiki.org ever blocks external media: upload the images to the page's media
   namespace and reference them as `:plugin:<name>:<file>` instead.)*
 - **usersettings = optional integration, not a dependency.** If the plugin registers a
@@ -89,12 +89,14 @@ block right is the entire job — the prose around it is for humans.
   `:!:` notice right after the intro that links down to a final **"Made with AI assistance"**
   section, and that section itself — the `enhanced.jpg` banner, the short standard text, a link to
   [AI-FOR-GOOD.md](AI-FOR-GOOD.md) for skeptics, and a pointer to the
-  [dokuwiki-claude](https://github.com/tracker-user/dokuwiki-claude) repo. The banner is
-  hot-linked from that shared repo (`…/dokuwiki-claude/main/images/enhanced.jpg`), **not** each
-  plugin's own `images/`, and it right-aligns purely via the **single leading space** inside
-  `{{ …}}` — DokuWiki's align-by-whitespace rule (`{{ img}}` = right, `{{img }}` = left,
-  `{{ img }}` = center; an editor that trims it silently kills the float). Tweak the wording per
-  plugin, but keep the disclosure.
+  [dokuwiki-claude](https://github.com/tracker-user/dokuwiki-claude) repo. The banner shows the
+  `enhanced-thumb.jpg` thumbnail wrapped in a `[[…|{{ …}}]]` link to the full-size `enhanced.jpg`
+  (don't resize with `?width` — dokuwiki.org renders the scaled copy poorly; ship a real
+  thumbnail instead). Both are hot-linked from that shared repo
+  (`…/dokuwiki-claude/main/images/`), **not** each plugin's own `images/`, and the banner
+  right-aligns purely via the **single leading space** inside the inner `{{ …}}` — DokuWiki's
+  align-by-whitespace rule (`{{ img}}` = right, `{{img }}` = left, `{{ img }}` = center; an editor
+  that trims it silently kills the float). Tweak the wording per plugin, but keep the disclosure.
 
 ---
 
@@ -147,7 +149,7 @@ Search for **<name>** in the [[plugin:extension|Extension Manager]] and install 
 
 <What the user sees / does. Adapt from README. Embed a screenshot:>
 
-{{https://raw.githubusercontent.com/tracker-user/dokuwiki-<name>/main/images/<name>-screen.png?680|<Name> in action}}
+{{https://raw.githubusercontent.com/tracker-user/dokuwiki-<name>/main/images/<name>-screen.png|<Name> in action}}
 
 ===== Configuration =====
 
@@ -173,7 +175,7 @@ You can also start a thread on the [[https://forum.dokuwiki.org/|DokuWiki forum]
 
 ===== Made with AI assistance =====
 
-{{ https://raw.githubusercontent.com/tracker-user/dokuwiki-claude/main/images/enhanced.jpg?400|AI-assisted DokuWiki development}}
+[[https://raw.githubusercontent.com/tracker-user/dokuwiki-claude/main/images/enhanced.jpg|{{ https://raw.githubusercontent.com/tracker-user/dokuwiki-claude/main/images/enhanced-thumb.jpg|AI-assisted DokuWiki development}}]]
 
 This plugin was either fully AI-generated or heavily AI-assisted — and I think that's a good
 thing. The idea is my own, I use the plugin myself, and I test it by hand; the actual code is

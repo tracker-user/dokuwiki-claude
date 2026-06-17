@@ -29,9 +29,12 @@ genericize before sharing the repo publicly.
 each generated page must carry the `ai-assisted` tag, a `:!:` notice right after the intro that
 links to `[[#made_with_ai_assistance]]`, and a final `===== Made with AI assistance =====`
 section (the `enhanced.jpg` banner + short standard text + a link to `AI-FOR-GOOD.md` for
-skeptics + pointer to the shared `dokuwiki-claude` repo). Banner is hot-linked from the shared
-dokuwiki-claude repo (`…/main/images/enhanced.jpg`), NOT each plugin's `images/`,
-and right-aligns ONLY via the single leading space inside `{{ …}}` (DokuWiki align-by-whitespace,
+skeptics + pointer to the shared `dokuwiki-claude` repo). Banner is the `enhanced-thumb.jpg`
+thumbnail wrapped in a `[[…|{{ …}}]]` link to the full-size `enhanced.jpg` (decided 2026-06-17:
+ship a real thumbnail; do NOT resize with `?width` — dokuwiki.org renders the scaled copy badly,
+applies to all screenshot embeds too). Both hot-linked from the shared dokuwiki-claude repo
+(`…/main/images/`), NOT each plugin's `images/`,
+and the banner right-aligns ONLY via the single leading space inside the inner `{{ …}}` (DokuWiki align-by-whitespace,
 confirmed `inc/parser/handler.php` Doku_Handler_Parse_Media — don't let it get trimmed). The standard
 wording lives in PUBLISHING.md's page template (also threaded through PLUGIN_REPO_REFERENCE.md §5
 and PROMPT_NEW_PLUGIN_PAGE.md). Intro length is now free (short or copy the README opening).

@@ -46,7 +46,7 @@ For **each** plugin, before writing the page:
    include `ai-assisted`** (the one deliberate custom tag).
 4. `ls images/` to get the **exact** screenshot filenames (some are `-screen.png`,
    some are `-screen1.png`, `-screen2.png`, …). Embed them in the **Usage** section with
-   `{{<raw-url>?680|caption}}`.
+   `{{<raw-url>|caption}}`.
 5. Build the body from the README: Installation → Usage (with screenshots) → Configuration
    (only if `conf/metadata.php` exists) → Syntax (**only** if it has a Syntax component) →
    Development → Changelog (RSS, `main` branch) → "Issues, questions & support" (GitHub issues
