@@ -126,6 +126,8 @@ donationurl:
 screenshot_img : https://raw.githubusercontent.com/tracker-user/dokuwiki-<name>/main/images/<name>-logo.png
 ----
 
+===== Description =====
+
 <Intro: what the plugin does and who it's for. Keep it short, or let it run as long as you like —
 adapt it from, or simply copy, the opening of the README.>
 
@@ -179,8 +181,9 @@ written and changed by an LLM from my prompts, guidance, and review afterwards.
 
 Working this way I can hold a high bar — no XSS, current coding standards, proper escaping and
 CSRF handling — and keep the plugin maintained. I think that compares well with much of the
-existing plugin repository, where a fair number of plugins turned out to carry XSS holes
-(several of which I found and reported) and many are simply abandoned.
+existing plugin repository, where XSS holes are common: I found and reported [[https://raw.githubusercontent.com/tracker-user/dokuwiki-claude/main/images/xss-reports.png|close to twenty]]
+myself, and only from quick broad checks rather than thorough reviews, so there are surely many
+more — and many plugins are simply abandoned besides.
 
 To be upfront: I can't claim to follow every advanced technique the model may put in the code. I
 do read and understand most of it, and nothing ships without my review — but I won't pretend

@@ -1,5 +1,6 @@
 - [User profile](user-profile.md) — DokuWiki admin, builds/reviews plugins, values token efficiency
 - [Plugin inventory](plugin-inventory.md) — Status of all custom/modernized plugins (5 built, 16 modernized)
+- [Plugin publishing workflow](plugin-publishing-workflow.md) — dokuwiki.org publishing: docs in _docs/public/, type bitmask + 309-tag vocab reference, conventions, 5 plugins pending
 - [DokuWiki admin pager/filter](dokuwiki-admin-pager-filter.md) — Core has no numbered pager; usermanager pagination/filtering is auth-delegated, so derived-column admin tables must paginate/filter in PHP
 - [DokuWiki admin row-form gotchas](dokuwiki-admin-rowform-gotchas.md) — Per-row POST buttons: avoid nested <form> (use HTML5 form= attr), never name a field `page`, escape inline confirm(); meta-file enumeration via search()+pathID
 - [DokuWiki metadata flag self-heal](dokuwiki-metadata-flag-selfheal.md) — Syntax-plugin flags go in non-persistent current meta so they clear when the token is removed; persistent sticks
